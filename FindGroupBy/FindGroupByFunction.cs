@@ -206,7 +206,18 @@ namespace FindGroupBy
 
 				string functionName = nofunction;
 				EnvDTE.CodeFunction func = textSelection.AnchorPoint.CodeElement[vsCMElement.vsCMElementFunction] as EnvDTE.CodeFunction;
-				if (func != null) functionName = func.FullName;
+				if (func != null)
+				{
+					functionName = func.Type.AsString + " " + func.Name + "(";
+					int i = 0;
+					foreach (CodeParameter param in func.Parameters)
+					{
+						functionName += param.Type.AsString + " " + param.Name;
+						if (i < (func.Parameters.Count - 1)) functionName += ", ";
+						i++;
+					}
+					functionName += ")";
+				}
 
 				if (!dict.ContainsKey(functionName))
 				{

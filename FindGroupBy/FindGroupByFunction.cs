@@ -224,7 +224,7 @@ namespace FindGroupBy
 					dict.Add(functionName, new List<string>());
 				}
 
-				dict[functionName].Add(textSelection.Text);
+				dict[functionName].Add("(" + textSelection.AnchorPoint.Line.ToString() + "): " + textSelection.Text);
 
 				lastFoundAt = textSelection.AnchorPoint.Line;
 				textSelection.StartOfLine(vsStartOfLineOptions.vsStartOfLineOptionsFirstColumn);

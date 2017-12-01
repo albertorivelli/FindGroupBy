@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="FindGroupBy.ce5e404b-4942-4060-99c6-8a0e924c2087" Version="1.2" Language="en-US" Publisher="Alberto Rivelli" />
+        <Identity Id="FindGroupBy.ce5e404b-4942-4060-99c6-8a0e924c2087" Version="1.3" Language="en-US" Publisher="Alberto Rivelli" />
         <DisplayName>FindGroupBy</DisplayName>
         <Description xml:space="preserve">Group by function find results</Description>
     </Metadata>

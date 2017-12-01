@@ -224,7 +224,7 @@ namespace FindGroupBy
 					dict.Add(functionName, new List<string>());
 				}
 
-				dict[functionName].Add("(" + textSelection.AnchorPoint.Line.ToString() + "): " + textSelection.Text);
+				dict[functionName].Add(dte.ActiveDocument.Name + "(" + textSelection.AnchorPoint.Line.ToString() + "): " + textSelection.Text);
 
 				lastFoundAt = textSelection.AnchorPoint.Line;
 				textSelection.StartOfLine(vsStartOfLineOptions.vsStartOfLineOptionsFirstColumn);
@@ -275,6 +275,8 @@ namespace FindGroupBy
 					outputWindowPane.OutputString("\r\n#endregion\r\n");
 				}
 			}
+
+			dict.Clear();
 		}
 
 		public string PrepareDefaultFind(DTE2 DTE, string prompt)
